@@ -96,26 +96,26 @@ int main(int argc, char **argv)
                 printf("Round: %02d,\tc1: %s,\tc2: %s,\t", ++round, get_enum_string(c1_res), get_enum_string(c2_res));
                 if (c1_res == PAPER && c2_res == SCISOR) {
                     c2_total+=1.0f;
-                    printf("c2 wins\n");
+                    printf("c2 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == SCISOR && c2_res == PAPER) {
                     c1_total+=1.0f;
-                    printf("c1 wins\n");
+                    printf("c1 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == SCISOR && c2_res == ROCK) {
                     c2_total+=1.0f;
-                    printf("c2 wins\n");
+                    printf("c2 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == ROCK && c2_res == SCISOR) {
                     c1_total+=1.0f;
-                    printf("c1 wins\n");
+                    printf("c1 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == PAPER && c2_res == ROCK) {
                     c1_total+=1.0f;
-                    printf("c1 wins\n");
+                    printf("c1 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == ROCK && c2_res == PAPER) {
                     c2_total+=1.0f;
-                    printf("c2 wins\n");
+                    printf("c2 wins,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 } else if (c1_res == c2_res) {
                     c1_total+=0.5f;
                     c2_total+=0.5f;
-                    printf("it's a tie\n");
+                    printf("it's a tie,\tScore: c1: %g,\t\tc2: %g\n", c1_total, c2_total);
                 }
             }
             printf("------------------------------------------------------------\n");
